@@ -38,7 +38,7 @@ class repository_mediacapture_demo extends recorder {
      * @param $mform
      */
     public function add_config_form($mform) {
-        $mform->addElement('advcheckbox', 'demo', get_string('nanogong', 'repository_mediacapture'),
+        $mform->addElement('advcheckbox', 'demo', get_string('demo', 'repository_mediacapture'),
                             null, array('group' => 1));
     }
 
