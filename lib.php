@@ -27,6 +27,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Type option names for the recorder
+     *
      * @return array $options
      */
     public static function get_type_option_names() {
@@ -35,6 +36,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Admin config settings for the type options defined in get_type_option_names()
+     *
      * @param $mform
      */
     public function add_config_form($mform) {
@@ -59,6 +61,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Url for submitting the recorded file (via ajax) to temp_dir()
+     *
      * @return string $url
      */
     public function post_url() {
@@ -69,6 +72,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * List of all string keys defined by the recorder in the lang file
+     *
      * @return array $strings
      */
     public function string_keys() {
@@ -77,6 +81,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Min version of supported_type() required by the recorder
+     *
      * @return array $version
      */
     public function min_version() {
@@ -85,6 +90,7 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Supported media viz array('audio', 'video')
+     *
      * @return array $media
      */
     public function supported_media() {
@@ -93,10 +99,20 @@ class repository_mediacapture_demo extends recorder {
 
     /**
      * Supported type viz array('html5', 'flash', 'java')
+     *
      * @return array $type
      */
-    public function supported_types() {
+    public function supported_mediatypes() {
         return array('java', 'flash', 'html5');
+    }
+
+    /**
+     * Return string of supported filetype associated with the recording
+     *
+     * @return string of supported file types/extensions.
+     */
+    public function supported_filetype() {
+        return '.wmv';
     }
 }
 
